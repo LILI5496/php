@@ -10,8 +10,9 @@ if(isset($_POST['sub'])){
     $title = $_POST['title'];
     $con = $_POST['con'];
     $cid = $_POST['cid'];
-    $sql = "insert into blog(wid,title,content,time,cid) values(null,'$title','$con',now(),'$cid'))";
+    $sql = "insert into blog(wid,title,content,time,cid) values(null,'$title','$con',now(),'$cid')";
     $query = mysqli_query($link,$sql);
+
     if($query){
 
     header('location:index.php');
