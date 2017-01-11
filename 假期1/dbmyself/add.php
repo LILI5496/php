@@ -13,6 +13,7 @@ if(isset($_POST['sub'])){
     $sql = "insert into blog(wid,title,content,time,cid) values(null,'$title','$con',now(),'$cid')";
     $query = mysqli_query($link,$sql);
 
+
     if($query){
 
     header('location:index.php');
