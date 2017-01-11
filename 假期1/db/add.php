@@ -4,8 +4,8 @@ if (!isset($_COOKIE['id'])){
     $str =$_SERVER['REQUEST_URI'];
     $arr=explode('/',$str);
     $num = count($arr)-1;
-    $uri = $arr['$num'];
-    header("location:login.php?uri=$uri'");
+    $uri = $arr["$num"];
+    header("location:login.php?uri=$uri");
 
 }
 ?>
