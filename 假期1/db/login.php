@@ -1,5 +1,4 @@
 <?php
-
 include "conn.php";
 if(isset($_GET['uri'])){
     $uri = $_GET['uri'];
@@ -15,17 +14,11 @@ if(isset($_POST['sub'])){
     $query =mysqli_query($link,$sql);
     $rs = mysqli_fetch_array($query);
     if ($rs){
-        setcookie('id',$rs['uid'],time()+60);
-        setcookie('name',$rs['uname'],time()+60);
+        setcookie('id',$rs['uid'],time()+600);
+        setcookie('name',$rs['uname'],time()+600);
         echo "<script>location='$uri'</script>";
     }
-
 }
-
-
-
-
-
 ?>
 <form action="login.php" method="post" id="f1">
     <input type="hidden" name="uri" value="<?php echo $uri  ?>">
