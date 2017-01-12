@@ -14,15 +14,31 @@ if(isset($_POST['sub'])){
     $query =mysqli_query($link,$sql);
     $rs = mysqli_fetch_array($query);
     if ($rs){
-        setcookie('id',$rs['uid'],time()+600);
-        setcookie('name',$rs['uname'],time()+600);
+
+        if (isset($_POST['check'])){
+            setcookie('id',$rs['uid'],time()+60);
+            setcookie('name',$rs['uname'],time()+60);
+
+        }else{
+            setcookie('id',$rs['uid']);
+            setcookie('name',$rs['uname']);
+        }
         echo "<script>location='$uri'</script>";
     }
 }
+?>
+<?php
+
+
+
+
+
 ?>
 <form action="login.php" method="post" id="f1">
     <input type="hidden" name="uri" value="<?php echo $uri  ?>">
     用户名:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name"><br />
     密 码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pass" id="p1"><br />
+    <input type="checkbox" name="check" value="">两分钟免登录<br />
+
     <input type="submit" name="sub" value="登录">
 </form>
