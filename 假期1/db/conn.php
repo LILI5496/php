@@ -5,7 +5,7 @@
 
 //1.打开数据库连接
 
-$link = @mysqli_connect('localhost:8889', 'root', '') or die('打开数据库连接失败！');
+$link = @mysqli_connect('127.0.0.1:3306', 'root', '123') or die('打开数据库连接失败！');
 
 
 //2.选择数据库
