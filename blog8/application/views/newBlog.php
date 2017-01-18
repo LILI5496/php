@@ -76,7 +76,7 @@
 </div>
     <div id="AdminContent">
 <div class="MainForm">
-<form id="BlogForm" action="/blog/publish_paper" method="POST">
+<form id="BlogForm" action="/blog/publish" method="POST">
 <input id="hdn_blog_id" name="draft" value="0" type="hidden">
   <table>
   <tbody><tr><td class="t">标题（必填）</td></tr>
@@ -139,7 +139,6 @@
   </tbody></table>
 </form>
 </div>
-<!--<script type='text/javascript' src='kindeditor/kindeditor-min.js' charset='utf-8'></script>-->
 
 <style>
 
