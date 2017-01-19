@@ -42,6 +42,9 @@
             $rs=$this->blog_model->search();
             $ar['blog']=$rs;
 
+
+
+
             $this->load->view('blogCatalogs',$ar);
         }
         public function addblogCatalogs(){
