@@ -45,6 +45,8 @@
 
             $this->load->view('blogCatalogs',$ar);
         }
+
+
         public function addblogCatalogs(){
             $this->load->model('blog_model');
             $name=$this->input->post('name');
