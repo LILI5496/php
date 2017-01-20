@@ -35,6 +35,7 @@
             $rs=$this->blog_model->do_publish($name,$content);
             if ($rs){
                 redirect('blog/publish_paper');
+
             }
         }
         public function blogCatalogs(){
