@@ -44,6 +44,7 @@
             $PASSWORD=$this->input->post('pwd');
             $this->load->model('user_model');
             $rs=$this->user_model->login_in($ACCOUNT,$PASSWORD);
+
             if ($rs){
                 $newdata = array(
                     'id'=>$rs->USER_ID,
