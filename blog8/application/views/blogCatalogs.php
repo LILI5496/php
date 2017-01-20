@@ -110,7 +110,7 @@
                             </tr>
                             <?php
 
-                            foreach ($blog as $v) {
+                            foreach ($blog as $value) {
                                 ?>
                                 <tr>
                                     <td class="idx"><?php echo $v->CATALOG_ID?></td>
