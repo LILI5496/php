@@ -11,6 +11,10 @@
                $query= $this->db->get_where('T_USERS',$arr);
                 return $query->row();
             }
+            public function a(){
+
+            }
         }
+
 
 ?>
