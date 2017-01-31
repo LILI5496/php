@@ -5,22 +5,18 @@
         {
             parent::__construct();
         }
-
         public function index()
         {
             $this->load->view('index_logined.php');
         }
-
         public function uloginIndex()
         {
             $this->load->view('index.php');
         }
-
         public function center()
         {
             $this->load->view('adminindex.php');
         }
-
         public function publish_paper()
         {
             $this->load->view('newBlog.php');
