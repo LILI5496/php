@@ -20,9 +20,6 @@
         public function publish_paper()
         {
             $this->load->view('newBlog.php');
-
-
-
         }
         public function publish(){
             $this->load->model('blog_model');
@@ -31,18 +28,14 @@
             $rs=$this->blog_model->do_publish($name,$content);
             if ($rs){
                 redirect('blog/publish_paper');
-
             }
         }
         public function blogCatalogs(){
             $this->load->model('blog_model');
             $rs=$this->blog_model->search();
             $ar['blog']=$rs;
-
-
             $this->load->view('blogCatalogs',$ar);
         }
-
 
         public function addblogCatalogs(){
             $this->load->model('blog_model');
